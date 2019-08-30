@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <div id="vowels"></div>
+
+
+    <script type="text/javascript">
+        function countVowels(str) {
+            var vowel_list1 = 'aeiou';
+            var vowel_list2 = 'AEIOU';
+            var vcount = 0;
+            var output = "";
+            var counts = "";
+            var output1 = "";
+
+            for (var i = 0; i <= vowel_list1.length; i++) {
+                vcount = 0;
+                for (var x = 0; x < str.length; x++) {
+                    if (vowel_list2[i] == str[x]) {
+                        vcount += 1;
+                    }
+                    if (vowel_list1[i] == str[x]) {
+                        vcount += 1;
+                    }
+                }
+                output1 += vowel_list1[i];
+                counts += "," + vcount;
+            }
+
+            output += "('" + output1 + "' " + counts + ")";
+            return output;
+        }
+
+        var returned = countVowels("aaewfejekuuiacsgsdaevoov");
+        document.getElementById("vowels").innerHTML = returned;
+
+
+        //console.log(vowel_count("Nagaba Angel"));
+    </script>
+</body>
+
+</html>
